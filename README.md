@@ -24,6 +24,7 @@ Self-hosted server for Triplit sync engine using node.js.
    ```bash
    pnpm run dev:gen
    ```
+   This generates a usable Service Token and Anonymous Token for connecting to the database.
 
 ## Running the Server
 
@@ -40,6 +41,20 @@ pnpm run dev
 ## Health Check
 
 The server exposes a health check endpoint at `/healthcheck`. This endpoint will return a 200 status code if the server is running and healthy.
+
+## Dashboard View
+
+You can view and manage your database using the Triplit Console:
+
+1. Visit [https://console.triplit.dev](https://console.triplit.dev)
+2. Enter your database URL (typically `http://localhost:6543` for local development)
+3. Use the Service Token generated from `pnpm run dev:gen` to authenticate
+
+The console provides a web interface to:
+- Browse and query your database
+- Manage collections and schemas
+- Monitor real-time sync activity
+- Debug connection issues
 
 ## Storage Adapters
 
